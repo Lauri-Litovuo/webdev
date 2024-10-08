@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "task": "lupdatept",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "task": "Do laundry",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "task": "Clean the house",
+    "completed": false
+  },
+  {
+    "id": 1728301672262,
+    "task": "do croceries",
+    "completed": false
+  },
+  {
+    "id": 1728301884845,
+    "task": "do croceries",
+    "completed": false
+  },
+  {
+    "id": 1728301945628,
+    "task": "learn javascript",
+    "completed": false
+  }
+]
