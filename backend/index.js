@@ -9,7 +9,11 @@ let todoData = JSON.parse(fs.readFileSync('database.json', 'utf8'))
 
 //CRUD create read update and delete
 app.get ('/', (req, res) => {
-	res.send(todoData);
+	try{
+		res.send(todoData);
+	} catch (error){
+		console.log(error);
+	}
 })
 
 function saveDataToFile() {
@@ -26,7 +30,6 @@ app.post ('/', (req, res) => {
 	todoData.push(newTodo);
 	saveDataToFile();
 	res.send(newTodo);
-
 })
 
 app.delete('/delete/:id', (req, res) => {
@@ -83,11 +86,3 @@ app.get('/todo/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Hello from port ${port}`)
 })
-
-// if (!todo){
-// 	res.status(404).json({message: 'Todo not found'})
-// }
-// else{
-// 	res.json{ 'todo updated successfully'};
-// }
-// send
